@@ -44,6 +44,7 @@ DOCUMENTATION:
         - If C(pass_through), IIS will use the identity of the user or application pool identity to access the file system or network.
         - If C(specific_user), IIS will use the credentials provided in I(username) and I(password) to access the file system or network.
       type: str
+      default: pass_through
       choices:
         - pass_through
         - specific_user
@@ -58,10 +59,10 @@ DOCUMENTATION:
         - Required when I(connect_as) is set to C(specific_user).
       type: str
   seealso:
-    - module: microsoft.iis.win_iis_virtualdirectory
-    - module: microsoft.iis.win_iis_webapppool
-    - module: microsoft.iis.win_iis_webbinding
-    - module: microsoft.iis.win_iis_website
+    - module: community.windows.win_iis_virtualdirectory
+    - module: community.windows.win_iis_webapppool
+    - module: community.windows.win_iis_webbinding
+    - module: community.windows.win_iis_website
   author:
     - Henrik Wallström (@henrikwallstrom)
 
